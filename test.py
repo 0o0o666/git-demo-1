@@ -1,6 +1,6 @@
 x = 10
 y = 10
-z = x + y
+z = x * y
 
 
 print(x + y)
