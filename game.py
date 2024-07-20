@@ -2,7 +2,7 @@ import random
 
 x = random.randint(1, 50)
 print(x)
-for __ in range(15):
+for i in range(15):
     y = int(input("請猜數字"))
     if x == y:
         print(f"猜對了,猜了{i+1}次")
