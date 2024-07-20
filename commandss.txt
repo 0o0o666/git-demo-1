@@ -1,0 +1,112 @@
+1.版本號
+- git version
+
+2.寫入使用者資訊
+- git config --global user.name ???
+- git config --global user.email ???@gmail.com
+
+3.檢視設定資訊
+- git config --list
+
+
+
+
+4.將目錄新增版本控管
+- git init
+
+5.檔案狀態
+-U (Untrack)未被控管
+
+6.控管狀態
+- git status
+
+7.加入控管
+- git add <檔案名稱> (U會變A(added)已加入)
+	  - * or .(所有確認)
+
+8.看編碼object內容
+- git cat-file -p 內容 sha-1 xxxxxx(
+	       -t 型態 sha-2
+9.檢視暫存區的檔案
+- git ls-files -s
+10.將暫存區資料移到倉庫
+- git commit -m "註解"
+11.cls
+12.提交後產生兩個object
+	- commit(sha-1)
+		- tree(sha-1)
+			- files
+13.檢視提交的commit
+- git log
+14.控管檔案修改
+	-M(modify)
+15.使用vim編輯器
+	-git commit (按enter)
+	-按esc鍵
+		-使用:wq(寫入離開)
+16.預設為Master分支
+	-HEAD永遠會
+
+17.手動刪除後
+	- 回復 : git restore
+	- 確認 : git add
+
+18.自動刪除
+- git rm -f <檔名>
+- 回復 git restore --staged <檔名>
+
+
+
+19.不追蹤資料
+- git rm --cached 3.txt
+
+
+20.檢視目前分支
+	- git branch
+		git branch <名子> (新增分支)
+	- git branch -D <分支名稱>(刪除分支)
+	- git branch -m <舊分支名稱> <新分支名稱>(改分支名稱)
+21.切換分支
+- git checkout <分支名子>
+- git checkout -b <分支名子>(創造分支+直接切換)
+
+22合併分支
+- git merge <分支名子>
+
+23.切換commit
+	- git check
+
+18.python
+	-test.py
+	-python插件
+
+19.修改回復
+- git checkout .
+
+20.回到位處存狀態
+- git reset --hard HEAD
+
+21.反毀
+- git reset --hard  ORIG_HEAD
+
+22.檢視雲端倉庫url
+- git remote -v
+git remote add origin https://github.com/0o0o666/git-demo-1.git
+
+23.本地端推送雲端倉庫
+- git push -u origin master (第一次寫的)
+- git push (第二次後寫的)
+
+24.刪除雲端得分支
+- git push --delete origin master
+
+25.增加這個當案,可忽略有些檔案不被控管
+.gitignore
+   	裡面內容
+	*.jpg (忽略全部jpg檔)
+	/dev (忽略dev資料夾)
+
+
+26.下載雲端
+	-複製專案
+		git clone 網址
